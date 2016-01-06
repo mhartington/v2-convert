@@ -1,0 +1,15 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Chats
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="page2">
+
+  <button ion-item *ngFor="#message of messages" (click)="pushDetail(message)">
+    <ion-avatar item-left>
+      <img [src]="message.face"/>
+    </ion-avatar>
+    {{message.name}}
+  </button>
+</ion-content>
